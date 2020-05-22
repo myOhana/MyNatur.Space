@@ -1,0 +1,7 @@
+{
+  "name": "treeHugger",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
