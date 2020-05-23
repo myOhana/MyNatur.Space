@@ -18,7 +18,7 @@ const NewsCard = ({ author, title, url, publishedAt, description }) => {
       </IonCardHeader>
 
       <IonCardContent>
-        Date: {publishedAt}
+        Published on: {publishedAt}
         <br />
         {description}
       </IonCardContent>
