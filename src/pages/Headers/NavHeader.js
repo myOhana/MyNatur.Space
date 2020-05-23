@@ -4,9 +4,7 @@ import {
     IonTitle,
     IonToolbar,
     IonButtons,
-    IonBackButton,
-    IonIcon,
-    IonButton
+    IonBackButton
 } from "@ionic/react";
 
 const NavHeader = ({ title }) => {
