@@ -15,7 +15,7 @@ const Events = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar color="headline">
-          <IonTitle>Events</IonTitle>
+          <IonTitle>MyNatur Events</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

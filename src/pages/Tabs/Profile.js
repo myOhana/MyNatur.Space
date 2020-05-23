@@ -22,7 +22,7 @@ const Profile = () => {
             <IonContent>
                 <IonHeader>
                     <IonToolbar color="profileheadline">
-                        <IonTitle>My Nature Profile</IonTitle>
+                        <IonTitle>MyNatur Profile</IonTitle>
                     </IonToolbar>
                 </IonHeader>
                 <IonGrid>
