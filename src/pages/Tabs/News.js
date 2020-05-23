@@ -7,13 +7,14 @@ import {
   IonContent,
 } from "@ionic/react";
 import Newslist from "../../components/Newslist/Newslist";
-import {newsinfo} from '../../newsinfo';
+import { newsinfo } from '../../newsinfo';
+import '../../theme/variables.css';
 
 const News = () => {
  return (
       <IonPage>
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar color="headline">
             <IonTitle>News</IonTitle>
           </IonToolbar>
         </IonHeader>

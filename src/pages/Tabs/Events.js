@@ -8,12 +8,13 @@ import {
 } from "@ionic/react";
 import Cardlist from "../../components/CardList/Cardlist";
 import { eventinformation } from '../../eventinformation';
+import '../../theme/variables.css';
 
 const Events = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="headline">
           <IonTitle>Events</IonTitle>
         </IonToolbar>
       </IonHeader>
