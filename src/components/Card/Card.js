@@ -12,7 +12,7 @@ import 'tachyons';
 
 const Card = ({ id, organization, location, day, date, details }) => {
   return (
-    <IonCard className='grow ma4 bordercolor'>
+    <IonCard className='ma4 bordercolor'>
       <IonCardHeader>
         <IonCardSubtitle>{organization}</IonCardSubtitle>
         <IonCardTitle>{location}</IonCardTitle>

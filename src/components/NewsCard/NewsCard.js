@@ -13,7 +13,7 @@ import '../../theme/variables.css';
 
 const NewsCard = ({ author, title, url, publishedAt, description }) => {
   return (
-    <IonCard className='grow ma4 bordercolorn' >
+    <IonCard className='ma4 bordercolorn' >
       <IonCardHeader>
         <IonCardSubtitle>{author}</IonCardSubtitle>
         <IonCardTitle>{title}</IonCardTitle>
