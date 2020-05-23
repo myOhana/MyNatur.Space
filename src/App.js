@@ -13,6 +13,7 @@ import { IonReactRouter } from "@ionic/react-router";
 import {
   newspaperOutline,
   personCircleOutline,
+  earthOutline
 } from "ionicons/icons";
 import News from "./pages/Tabs/News";
 import Events from "./pages/Tabs/Events";
@@ -59,7 +60,7 @@ const App = () => {
               <IonLabel>News</IonLabel>
             </IonTabButton>
             <IonTabButton tab="events" href="/events">
-              <IonIcon icon={personCircleOutline} />
+              <IonIcon icon={earthOutline} />
               <IonLabel>Events</IonLabel>
             </IonTabButton>
             <IonTabButton tab="profile" href="/profile">
