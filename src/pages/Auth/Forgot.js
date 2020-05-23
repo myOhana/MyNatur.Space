@@ -14,7 +14,7 @@ import firebase from "../../firebase";
 import { toast } from "../../helpers/toast";
 import useForm from "../../hooks/useForm";
 import validatePasswordReset from "../../validators/validatePasswordReset";
-import NavHeader from "../../components/Header/NavHeader";
+import NavHeader from "../Headers/NavHeader";
 
 const INITIAL_STATE = {
     email: "",
