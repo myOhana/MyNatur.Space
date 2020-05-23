@@ -11,6 +11,7 @@ import {
     IonGrid,
     IonRow,
     IonCol,
+    IonText,
 } from "@ionic/react";
 import '../../theme/variables.css';
 import '../../theme/profilepage.css';
@@ -19,19 +20,22 @@ const Profile = () => {
     return (
         <IonPage>
             <IonContent>
-                <IonHeader className="profile-headline">
+                <IonHeader>
                     <IonToolbar color="headline">
                         <IonTitle>My Nature Profile</IonTitle>
                     </IonToolbar>
                 </IonHeader>
                 <IonGrid>
                     <IonRow>
-                        <IonCol size="auto">
+                        <IonCol className="avatar-col" size="auto">
                             <IonAvatar className="avataar-image box">
                                 <img src="https://image.flaticon.com/icons/svg/145/145852.svg" alt="avataar" />
                             </IonAvatar>
+                            <IonText>
+                                <h5>Hi, Natlie</h5>
+                            </IonText>
                         </IonCol>
-                        <IonCol size="6">
+                        <IonCol size="7">
                             <IonItem lines="none">
                                 <IonLabel className="trees-planted">
                                     <h2> Trees Planted: </h2>
