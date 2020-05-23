@@ -11,7 +11,7 @@ import {eventinformation} from '../../eventinformation';
 
 const News = () => {
   return (
-    <IonPage>
+    <IonPage className="dark">
       <IonHeader>
         <IonToolbar>
           <IonTitle>News</IonTitle>
