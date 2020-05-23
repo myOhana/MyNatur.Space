@@ -35,7 +35,7 @@ const Profile = () => {
                                 <h5>Hi, Natasha</h5>
                             </IonText>
                         </IonCol>
-                        <IonCol size="7">
+                        <IonCol size="6">
                             <IonItem lines="none">
                                 <IonLabel className="trees-planted">
                                     <h2> Trees Planted: </h2>
