@@ -74,6 +74,14 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /* headline color */
+  --ion-color-headline: #338028;
+  --ion-color-headline-rgb: 51, 128, 40;
+  --ion-color-headline-contrast: #ffffff;
+  --ion-color-headline-contrast-rgb: 255, 255, 255;
+  --ion-color-headline-shade: #2d7123;
+  --ion-color-headline-tint: #478d3e;
 }
 
 @media (prefers-color-scheme: light) {
@@ -145,6 +153,14 @@ http://ionicframework.com/docs/theming/ */
     --ion-color-light-contrast-rgb: 255, 255, 255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+    /* headline color */
+    --ion-color-headline: #338028;
+    --ion-color-headline-rgb: 51, 128, 40;
+    --ion-color-headline-contrast: #ffffff;
+    --ion-color-headline-contrast-rgb: 255, 255, 255;
+    --ion-color-headline-shade: #2d7123;
+    --ion-color-headline-tint: #478d3e;
   }
 
   /*
@@ -227,13 +243,22 @@ http://ionicframework.com/docs/theming/ */
   }
 }
 
+.ion-color-headline {
+  --ion-color-base: var(--ion-color-headline);
+  --ion-color-base-rgb: var(--ion-color-headline-rgb);
+  --ion-color-contrast: var(--ion-color-headline-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-headline-contrast-rgb);
+  --ion-color-shade: var(--ion-color-headline-shade);
+  --ion-color-tint: var(--ion-color-headline-tint);
+}
+
 
 /*
  * Dark Colors
  * ------------------
  */
 
-body.dark {
+/* body.dark {
   --ion-color-primary: #428cff;
   --ion-color-primary-rgb: 66, 140, 255;
   --ion-color-primary-contrast: #ffffff;
@@ -303,7 +328,7 @@ body.dark {
  * -------------------
  */
 
-.ios body.dark {
+/* .ios body.dark {
   --ion-background-color: #000000;
   --ion-background-color-rgb: 0, 0, 0;
 
@@ -334,14 +359,14 @@ body.dark {
 
   --ion-item-background: #1c1c1c;
   --ion-item-background-activated: #313131;
-}
+} */
 
 /*
  * Material Design Dark Theme
  * ------------------------------
  */
 
-.md body.dark {
+/* .md body.dark {
   --ion-background-color: #121212;
   --ion-background-color-rgb: 18, 18, 18;
 
@@ -371,9 +396,9 @@ body.dark {
   --ion-color-step-950: #f3f3f3;
 
   --ion-item-background: #1a1b1e;
-}
+} */
 
 /* Optional CSS, this is added for the flashing that happens when toggling between themes */
-ion-item {
+/* ion-item {
   --transition: none;
-}
+} */
