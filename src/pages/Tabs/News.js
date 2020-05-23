@@ -4,10 +4,10 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonContent,
+  IonContent
 } from "@ionic/react";
 import Cardlist from "../../components/CardList/Cardlist";
-import {eventinformation} from '../../eventinformation';
+import { eventinformation } from '../../eventinformation';
 
 const News = () => {
   return (
@@ -18,7 +18,7 @@ const News = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <Cardlist eventinformation={eventinformation}/>
+        <Cardlist eventinformation={eventinformation} />
       </IonContent>
     </IonPage>
   );
