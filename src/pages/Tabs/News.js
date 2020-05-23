@@ -3,8 +3,11 @@ import {
   IonHeader,
   IonPage,
   IonTitle,
-  IonToolbar
+  IonToolbar,
+  IonContent,
 } from "@ionic/react";
+import Cardlist from "../../components/CardList/Cardlist";
+import {eventinformation} from '../../eventinformation';
 
 const News = () => {
   return (
@@ -14,6 +17,9 @@ const News = () => {
           <IonTitle>News</IonTitle>
         </IonToolbar>
       </IonHeader>
+      <IonContent fullscreen>
+        <Cardlist eventinformation={eventinformation}/>
+      </IonContent>
     </IonPage>
   );
 };
