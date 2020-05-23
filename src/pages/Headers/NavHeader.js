@@ -12,7 +12,7 @@ const NavHeader = ({ title }) => {
         <IonHeader>
             <IonToolbar color="primary">
                 <IonButtons slot="start">
-                    <IonBackButton defaultHref="/" />
+                    <IonBackButton defaultHref="/login" />
                 </IonButtons>
                 <IonTitle>{title}</IonTitle>
             </IonToolbar>
