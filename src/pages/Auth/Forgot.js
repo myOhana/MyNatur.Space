@@ -15,6 +15,7 @@ import { toast } from "../../helpers/toast";
 import useForm from "../../hooks/useForm";
 import validatePasswordReset from "../../validators/validatePasswordReset";
 import NavHeader from "../Headers/NavHeader";
+import "tachyons";
 
 const INITIAL_STATE = {
     email: "",
@@ -45,6 +46,7 @@ const Forgot = (props) => {
 
     return (
         <IonPage>
+        <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
             <NavHeader title="Password Reset" />
             <IonLoading message={"Please wait..."} isOpen={busy} />
             <IonContent>
@@ -72,6 +74,7 @@ const Forgot = (props) => {
                     </IonCol>
                 </IonRow>
             </IonContent>
+            </article>
         </IonPage>
     );
 };
