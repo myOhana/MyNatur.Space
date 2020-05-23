@@ -29,7 +29,7 @@ const NewsCard = ({ author, title, url, publishedAt, description }) => {
         target="_blank"
         href={url}
       >
-        Visit Event
+        Visit Article
       </IonButton>
     </IonCard>
   );
