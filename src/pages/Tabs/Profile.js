@@ -6,7 +6,7 @@ import {
     IonToolbar
 } from "@ionic/react";
 
-const News = () => {
+const Profile = () => {
     return (
         <IonPage>
             <IonHeader>
@@ -18,4 +18,4 @@ const News = () => {
     );
 };
 
-export default News;
+export default Profile;

@@ -15,6 +15,7 @@ import {
   personCircleOutline,
 } from "ionicons/icons";
 import News from "./pages/Tabs/News";
+import Events from "./pages/Tabs/Events";
 import Profile from "./pages/Tabs/Profile";
 
 /* Core CSS required for Ionic components to work properly */
@@ -48,6 +49,7 @@ const App = () => {
               exact={true}
             />
             <Route path="/news" component={News} />
+            <Route path="/events" component={Events} />
             <Route path="/profile" component={Profile} />
             <Route component={() => <Redirect to="/news" />} />
           </IonRouterOutlet>
@@ -55,6 +57,10 @@ const App = () => {
             <IonTabButton tab="news" href="/news">
               <IonIcon icon={newspaperOutline} />
               <IonLabel>News</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="events" href="/events">
+              <IonIcon icon={personCircleOutline} />
+              <IonLabel>Events</IonLabel>
             </IonTabButton>
             <IonTabButton tab="profile" href="/profile">
               <IonIcon icon={personCircleOutline} />
