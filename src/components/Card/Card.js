@@ -24,7 +24,7 @@ const Card = ({ id, organization, location, day, date, details }) => {
         <br />
         {details}
       </IonCardContent>
-      <IonButton className="button" color='success' fill='outline' tsrget='_blank' >Visit Event</IonButton>
+      <IonButton className="button" color='success' fill='outline' target='_blank' >Visit Event</IonButton>
     </IonCard>
   );
 };
