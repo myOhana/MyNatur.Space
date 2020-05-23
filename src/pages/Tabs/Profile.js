@@ -21,7 +21,7 @@ const Profile = () => {
         <IonPage>
             <IonContent>
                 <IonHeader>
-                    <IonToolbar color="headline">
+                    <IonToolbar color="profileheadline">
                         <IonTitle>My Nature Profile</IonTitle>
                     </IonToolbar>
                 </IonHeader>
@@ -32,7 +32,7 @@ const Profile = () => {
                                 <img src="https://image.flaticon.com/icons/svg/145/145852.svg" alt="avataar" />
                             </IonAvatar>
                             <IonText>
-                                <h5>Hi, Natlie</h5>
+                                <h5>Hi, Natasha</h5>
                             </IonText>
                         </IonCol>
                         <IonCol size="7">
@@ -47,7 +47,7 @@ const Profile = () => {
                                 </IonLabel>
                             </IonItem>
                             <IonItem lines="none">
-                                <IonLabel className="trees-cut">
+                                <IonLabel className="trees-cut" color='profileheadline'>
                                     <h2> Trees Cut: </h2>
                                 </IonLabel>
                             </IonItem>

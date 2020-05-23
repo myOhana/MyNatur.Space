@@ -82,6 +82,30 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-headline-contrast-rgb: 255, 255, 255;
   --ion-color-headline-shade: #2d7123;
   --ion-color-headline-tint: #478d3e;
+
+  /* newsheadline color */
+  --ion-color-newsheadline: #e69225;
+  --ion-color-newsheadline-rgb: 230,146,37;
+  --ion-color-newsheadline-contrast: #ffffff;
+  --ion-color-newsheadline-contrast-rgb: 0,0,0;
+  --ion-color-newsheadline-shade: #ca8021;
+  --ion-color-newsheadline-tint: #e99d3b;
+
+  /* profileheadline color  */
+  --ion-color-profileheadline: #e04c5b;
+  --ion-color-profileheadline-rgb: 224,76,91;
+  --ion-color-profileheadline-contrast: #ffffff;
+  --ion-color-profileheadline-contrast-rgb: 255,255,255;
+  --ion-color-profileheadline-shade: #c54350;
+  --ion-color-profileheadline-tint: #e35e6b;
+
+  /* Newscard color */
+  --ion-color-newscard: #bbfbb1;
+  --ion-color-newscard-rgb: 169, 255, 156;
+  --ion-color-newscard-contrast: #000000;
+  --ion-color-newscard-contrast-rgb: 0, 0, 0;
+  --ion-color-newscard-shade: #a7f59b;
+  --ion-color-newscard-tint: #b2ffa6;
 }
 
 @media (prefers-color-scheme: light) {
@@ -161,6 +185,30 @@ http://ionicframework.com/docs/theming/ */
     --ion-color-headline-contrast-rgb: 255, 255, 255;
     --ion-color-headline-shade: #2d7123;
     --ion-color-headline-tint: #478d3e;
+
+    /* newsheadline color */
+  --ion-color-newsheadline: #e69225;
+  --ion-color-newsheadline-rgb: 230,146,37;
+  --ion-color-newsheadline-contrast: #ffffff;
+  --ion-color-newsheadline-contrast-rgb: 0,0,0;
+  --ion-color-newsheadline-shade: #ca8021;
+  --ion-color-newsheadline-tint: #e99d3b;
+
+  /* profile headline */
+  --ion-color-profileheadline: #e04c5b;
+  --ion-color-profileheadline-rgb: 224,76,91;
+  --ion-color-profileheadline-contrast: #ffffff;
+  --ion-color-profileheadline-contrast-rgb: 255,255,255;
+  --ion-color-profileheadline-shade: #c54350;
+  --ion-color-profileheadline-tint: #e35e6b;
+
+    /* Newscard color */
+    --ion-color-newscard: #a9ff9c;
+    --ion-color-newscard-rgb: 169, 255, 156;
+    --ion-color-newscard-contrast: #000000;
+    --ion-color-newscard-contrast-rgb: 0, 0, 0;
+    --ion-color-newscard-shade: #95e089;
+    --ion-color-newscard-tint: #b2ffa6;
   }
 
   /*
@@ -199,7 +247,6 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-item-background: #000000;
   }
-
 
   /*
    * Material Design Dark Theme
@@ -252,6 +299,32 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-tint: var(--ion-color-headline-tint);
 }
 
+.ion-color-newsheadline {
+  --ion-color-base: var(--ion-color-newsheadline);
+  --ion-color-base-rgb: var(--ion-color-newsheadline-rgb);
+  --ion-color-contrast: var(--ion-color-newsheadline-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-newsheadline-contrast-rgb);
+  --ion-color-shade: var(--ion-color-newsheadline-shade);
+  --ion-color-tint: var(--ion-color-newsheadline-tint);
+}
+
+.ion-color-profileheadline {
+  --ion-color-base: var(--ion-color-profileheadline);
+  --ion-color-base-rgb: var(--ion-color-profileheadline-rgb);
+  --ion-color-contrast: var(--ion-color-profileheadline-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-profileheadline-contrast-rgb);
+  --ion-color-shade: var(--ion-color-profileheadline-shade);
+  --ion-color-tint: var(--ion-color-profileheadline-tint);
+}
+
+.ion-color-newscard {
+  --ion-color-base: var(--ion-color-newscard);
+  --ion-color-base-rgb: var(--ion-color-newscard-rgb);
+  --ion-color-contrast: var(--ion-color-newscard-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-newscard-contrast-rgb);
+  --ion-color-shade: var(--ion-color-newscard-shade);
+  --ion-color-tint: var(--ion-color-newscard-tint);
+}
 
 /*
  * Dark Colors
