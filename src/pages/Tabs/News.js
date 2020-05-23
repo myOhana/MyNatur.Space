@@ -4,21 +4,21 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonContent,
+  IonContent
 } from "@ionic/react";
 import Cardlist from "../../components/CardList/Cardlist";
-import {eventinformation} from '../../eventinformation';
+import { eventinformation } from '../../eventinformation';
 
 const News = () => {
   return (
-    <IonPage className="dark">
+    <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonTitle>News</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <Cardlist eventinformation={eventinformation}/>
+        <Cardlist eventinformation={eventinformation} />
       </IonContent>
     </IonPage>
   );
