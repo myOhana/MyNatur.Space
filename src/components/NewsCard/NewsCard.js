@@ -8,10 +8,12 @@ import {
   IonButton,
 } from "@ionic/react";
 import "../Card/Card.css";
+import 'tachyons';
+import '../../theme/variables.css';
 
 const NewsCard = ({ author, title, url, publishedAt, description }) => {
   return (
-    <IonCard>
+    <IonCard className='grow ma4 bordercolorn' >
       <IonCardHeader>
         <IonCardSubtitle>{author}</IonCardSubtitle>
         <IonCardTitle>{title}</IonCardTitle>
@@ -24,7 +26,7 @@ const NewsCard = ({ author, title, url, publishedAt, description }) => {
       </IonCardContent>
       <IonButton
         className="button"
-        color="success"
+        color="newsheadline"
         fill="outline"
         target="_blank"
         href={url}

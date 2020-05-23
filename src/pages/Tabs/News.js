@@ -14,7 +14,7 @@ const News = () => {
  return (
       <IonPage>
         <IonHeader>
-          <IonToolbar color="headline">
+          <IonToolbar color="newsheadline">
             <IonTitle>News</IonTitle>
           </IonToolbar>
         </IonHeader>
