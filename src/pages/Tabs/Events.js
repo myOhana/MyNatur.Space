@@ -53,7 +53,7 @@ const Events = (props) => {
                                     <IonButton
                                         expand="block"
                                         routerLink={`/register`}
-                                        color="primary"
+                                        color="secondary"
                                     >
                                         Sign Up
                                     </IonButton>
@@ -64,7 +64,7 @@ const Events = (props) => {
                                     <IonButton
                                         expand="block"
                                         routerLink={`/login`}
-                                        color="primary"
+                                        color="tertiary"
                                         fill="outline"
                                     >
                                         Log In

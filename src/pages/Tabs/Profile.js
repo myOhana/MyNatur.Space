@@ -78,7 +78,7 @@ const Profile = (props) => {
                     <IonLabel className="trees-planted">
                       <h2> Trees Planted: {plantedcount}</h2>
                     </IonLabel>
-                    <IonButton
+                    <IonButton color='secondary'
                       onClick={() => setCountPlanted(plantedcount + 1)}
                     > click me </IonButton>
                   </IonItem>
@@ -86,7 +86,7 @@ const Profile = (props) => {
                     <IonLabel className="trees-saved">
                       <h2> Trees Saved: {savedcount}</h2>
                     </IonLabel>
-                    <IonButton
+                    <IonButton color='secondary'
                       onClick={() => setCountSaved(savedcount + 1)}
                     > click me </IonButton>
                   </IonItem>
@@ -94,7 +94,7 @@ const Profile = (props) => {
                     <IonLabel className="trees-cut" color="profileheadline">
                       <h2> Trees Cut: {cutcount}</h2>
                     </IonLabel>
-                    <IonButton
+                    <IonButton color='secondary'
                     onClick={() => setCountCut(cutcount + 1)}
                   > click me </IonButton>
                   </IonItem>
@@ -105,7 +105,7 @@ const Profile = (props) => {
                   <IonButton
                     expand="block"
                     routerLink={`/edit-profile`}
-                    color="primary"
+                    color="tertiary"
                     fill="outline"
                   >
                     Edit Profile
@@ -116,7 +116,7 @@ const Profile = (props) => {
                 <IonCol>
                   <IonButton
                     expand="block"
-                    color="primary"
+                    color="secondary"
                     onClick={logoutUser}
                   >
                     Log Out
@@ -126,13 +126,16 @@ const Profile = (props) => {
             </IonGrid>
           </>
         ) : (
+            <>
+            <IonText color='medium'>
+            <h1 className='tc'>Please Login to view this page</h1></IonText>
           <IonGrid>
             <IonRow>
               <IonCol>
                 <IonButton
                   expand="block"
                   routerLink={`/register`}
-                  color="primary"
+                  color="secondary"
                 >
                   Sign Up
                 </IonButton>
@@ -143,7 +146,7 @@ const Profile = (props) => {
                 <IonButton
                   expand="block"
                   routerLink={`/login`}
-                  color="primary"
+                  color="tertiary"
                   fill="outline"
                 >
                   Log In
@@ -151,6 +154,7 @@ const Profile = (props) => {
               </IonCol>
             </IonRow>
           </IonGrid>
+          </>
         )}
       </IonContent>
     </IonPage>
