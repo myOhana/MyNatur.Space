@@ -51,7 +51,7 @@ const Profile = (props) => {
                             <IonRow>
                                 <IonCol className="avatar-col" size="auto">
                                     <IonAvatar className="avataar-image box">
-                                        <img src="https://image.flaticon.com/icons/svg/145/145852.svg" alt="avataar" />
+                                        <img src="https://image.flaticon.com/icons/svg/2911/2911573.svg" alt="avataar" />
                                     </IonAvatar>
                                     <IonText>
                                         <h5>Hi, {user.displayName}</h5>
