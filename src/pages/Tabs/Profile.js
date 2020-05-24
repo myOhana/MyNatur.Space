@@ -31,7 +31,6 @@ function useStickyState(defaultValue, key) {
   return [value, setValue];
 }
 
-
 const Profile = (props) => {
   const { user } = React.useContext(UserContext);
 
@@ -78,25 +77,39 @@ const Profile = (props) => {
                     <IonLabel className="trees-planted">
                       <h2> Trees Planted: {plantedcount}</h2>
                     </IonLabel>
-                    <IonButton color='secondary'
+                    <IonButton
+                      color="buttonscolor"
                       onClick={() => setCountPlanted(plantedcount + 1)}
-                    > planted </IonButton>
+                    >
+                      {" "}
+                      + planted{" "}
+                    </IonButton>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-saved">
                       <h2> Trees Saved: {savedcount}</h2>
                     </IonLabel>
-                    <IonButton color='secondary'
+                    <IonButton
+                      className="btnsize tc"
+                      color="buttonscolor"
                       onClick={() => setCountSaved(savedcount + 1)}
-                    > saved </IonButton>
+                    >
+                      {" "}
+                      + saved{" "}
+                    </IonButton>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-cut" color="profileheadline">
                       <h2> Trees Cut: {cutcount}</h2>
                     </IonLabel>
-                    <IonButton color='secondary'
-                    onClick={() => setCountCut(cutcount + 1)}
-                  > cut </IonButton>
+                    <IonButton
+                      className="btnsize tc"
+                      color="buttonscolor"
+                      onClick={() => setCountCut(cutcount + 1)}
+                    >
+                      {" "}
+                      + cut{" "}
+                    </IonButton>
                   </IonItem>
                 </IonCol>
               </IonRow>
@@ -126,34 +139,35 @@ const Profile = (props) => {
             </IonGrid>
           </>
         ) : (
-            <>
-            <IonText color='medium'>
-            <h1 className='tc'>Please Login to view this page</h1></IonText>
-          <IonGrid>
-            <IonRow>
-              <IonCol>
-                <IonButton
-                  expand="block"
-                  routerLink={`/register`}
-                  color="secondary"
-                >
-                  Sign Up
-                </IonButton>
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol>
-                <IonButton
-                  expand="block"
-                  routerLink={`/login`}
-                  color="tertiary"
-                  fill="outline"
-                >
-                  Log In
-                </IonButton>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
+          <>
+            <IonText color="medium">
+              <h1 className="tc">Please Login to view this page</h1>
+            </IonText>
+            <IonGrid>
+              <IonRow>
+                <IonCol>
+                  <IonButton
+                    expand="block"
+                    routerLink={`/register`}
+                    color="secondary"
+                  >
+                    Sign Up
+                  </IonButton>
+                </IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol>
+                  <IonButton
+                    expand="block"
+                    routerLink={`/login`}
+                    color="tertiary"
+                    fill="outline"
+                  >
+                    Log In
+                  </IonButton>
+                </IonCol>
+              </IonRow>
+            </IonGrid>
           </>
         )}
       </IonContent>
