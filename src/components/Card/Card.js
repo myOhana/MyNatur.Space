@@ -10,7 +10,7 @@ import {
 import "./Card.css";
 import 'tachyons';
 
-const Card = ({ id, organization, location, day, date, details }) => {
+const Card = ({ id, organization, location, day, date, details, link }) => {
   return (
     <IonCard className='ma4 bordercolor'>
       <IonCardHeader>
@@ -25,7 +25,7 @@ const Card = ({ id, organization, location, day, date, details }) => {
         <br />
         {details}
       </IonCardContent>
-      <IonButton className="button" color='success' fill='outline' target='_blank' >Visit Event</IonButton>
+      <IonButton className="button" href={link} color='success' fill='outline' target='_blank' >Visit Event</IonButton>
     </IonCard>
   );
 };
