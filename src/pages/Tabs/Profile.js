@@ -20,6 +20,17 @@ import UserContext from "../../contexts/UserContext";
 import firebase from "../../firebase";
 import { toast } from "../../helpers/toast";
 
+function useStickyState(defaultValue, key) {
+  const [value, setValue] = React.useState(() => {
+    const stickyValue = window.localStorage.getItem(key);
+    return stickyValue !== null ? JSON.parse(stickyValue) : defaultValue;
+  });
+  React.useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+  return [value, setValue];
+}
+
 
 const Profile = (props) => {
   const { user } = React.useContext(UserContext);
@@ -34,6 +45,10 @@ const Profile = (props) => {
       toast(err.message);
     }
   }
+
+  const [plantedcount, setCountPlanted] = useStickyState(0, "plantedcount");
+  const [savedcount, setCountSaved] = useStickyState(0, "savedcount");
+  const [cutcount, setCountCut] = useStickyState(0, "countcut");
 
   return (
     <IonPage>
@@ -61,18 +76,27 @@ const Profile = (props) => {
                 <IonCol size="12">
                   <IonItem lines="none">
                     <IonLabel className="trees-planted">
-                      <h2> Trees Planted: 5</h2>
+                      <h2> Trees Planted: {plantedcount}</h2>
                     </IonLabel>
+                    <IonButton
+                      onClick={() => setCountPlanted(plantedcount + 1)}
+                    > click me </IonButton>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-saved">
-                      <h2> Trees Saved: 10</h2>
+                      <h2> Trees Saved: {savedcount}</h2>
                     </IonLabel>
+                    <IonButton
+                      onClick={() => setCountSaved(savedcount + 1)}
+                    > click me </IonButton>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-cut" color="profileheadline">
-                      <h2> Trees Cut: 1</h2>
+                      <h2> Trees Cut: {cutcount}</h2>
                     </IonLabel>
+                    <IonButton
+                    onClick={() => setCountCut(cutcount + 1)}
+                  > click me </IonButton>
                   </IonItem>
                 </IonCol>
               </IonRow>
