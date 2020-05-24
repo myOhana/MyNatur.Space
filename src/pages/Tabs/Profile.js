@@ -70,7 +70,7 @@ const Profile = (props) => {
                     />
                   </IonAvatar>
                   <IonText>
-                    <h5>Hi, {user.displayName}</h5>
+                    <h5>Hey, {user.displayName}!</h5>
                   </IonText>
                 </IonCol>
                 <IonCol size="12">
@@ -80,7 +80,7 @@ const Profile = (props) => {
                     </IonLabel>
                     <IonButton color='secondary'
                       onClick={() => setCountPlanted(plantedcount + 1)}
-                    > click me </IonButton>
+                    > planted </IonButton>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-saved">
@@ -88,7 +88,7 @@ const Profile = (props) => {
                     </IonLabel>
                     <IonButton color='secondary'
                       onClick={() => setCountSaved(savedcount + 1)}
-                    > click me </IonButton>
+                    > saved </IonButton>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-cut" color="profileheadline">
@@ -96,7 +96,7 @@ const Profile = (props) => {
                     </IonLabel>
                     <IonButton color='secondary'
                     onClick={() => setCountCut(cutcount + 1)}
-                  > click me </IonButton>
+                  > cut </IonButton>
                   </IonItem>
                 </IonCol>
               </IonRow>
