@@ -15,7 +15,7 @@ const News = () => {
       <IonPage>
         <IonHeader>
           <IonToolbar color="newsheadline">
-            <IonTitle>News</IonTitle>
+            <IonTitle>MyNatur News</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>

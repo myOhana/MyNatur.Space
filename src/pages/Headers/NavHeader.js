@@ -6,15 +6,17 @@ import {
     IonButtons,
     IonBackButton
 } from "@ionic/react";
+import '../../theme/variables.css';
+import 'tachyons';
 
 const NavHeader = ({ title }) => {
     return (
-        <IonHeader>
-            <IonToolbar color="primary">
+        <IonHeader className='br1'>
+            <IonToolbar  className='br2' color="secondary">
                 <IonButtons slot="start">
-                    <IonBackButton defaultHref="/login" />
+                    <IonBackButton className="pa3" defaultHref="/login" />
+                    <IonTitle>{title}</IonTitle>
                 </IonButtons>
-                <IonTitle>{title}</IonTitle>
             </IonToolbar>
         </IonHeader>
     );
