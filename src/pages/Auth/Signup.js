@@ -21,7 +21,10 @@ import "tachyons";
 const INITIAL_STATE = {
   name: "",
   email: "",
-  password: ""
+  password: "",
+  treesPlanted: "",
+  treesSaved: "",
+  treesCut: "",
 };
 
 const Signup = (props) => {
@@ -34,9 +37,9 @@ const Signup = (props) => {
 
   async function authenticateUser() {
     setBusy(true);
-    const { name, email, password } = values;
+    const { name, email, password, treesPlanted, treesSaved, treesCut } = values;
     try {
-      await firebase.register(name, email, password);
+      await firebase.register(name, email, password, treesPlanted, treesSaved, treesCut);
       toast("You have signed up successfully!");
       props.history.push("/");
     } catch (err) {
@@ -97,7 +100,7 @@ const Signup = (props) => {
             ></IonInput>
           </IonItem>
 
-          {/* <IonItem lines="full">
+          <IonItem lines="full">
             <IonLabel position="floating">Trees Planted</IonLabel>
             <IonInput
               name="treesPlanted"
@@ -128,7 +131,7 @@ const Signup = (props) => {
               onIonChange={handleChange}
               required
             ></IonInput>
-          </IonItem> */}
+          </IonItem>
 
           <IonRow>
             <IonCol>

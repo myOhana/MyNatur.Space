@@ -15,7 +15,7 @@ const NavHeader = ({ title }) => {
             <IonToolbar  className='br2' color="secondary">
                 <IonButtons slot="start">
                     <IonBackButton className="pa3" defaultHref="/login" />
-                    <IonTitle>{title}</IonTitle>
+                    <IonTitle>{ title }</IonTitle>
                 </IonButtons>
             </IonToolbar>
         </IonHeader>
