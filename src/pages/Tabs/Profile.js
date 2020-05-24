@@ -78,6 +78,7 @@ const Profile = (props) => {
                       <h2> Trees Planted: {plantedcount}</h2>
                     </IonLabel>
                     <IonButton
+                      className="btnsize tc"
                       color="buttonscolor"
                       onClick={() => setCountPlanted(plantedcount + 1)}
                     >
