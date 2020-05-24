@@ -116,16 +116,6 @@ const EditProfile = (props) => {
           </IonItem>
 
           <IonItem lines="full">
-            <IonLabel position="floating">New Password</IonLabel>
-            <IonInput
-              name="newPassword"
-              type="password"
-              value={values.newPassword}
-              onIonChange={handleChange}
-            ></IonInput>
-          </IonItem>
-
-          <IonItem lines="full">
             <IonLabel position="floating">Current Password</IonLabel>
             <IonInput
               name="currentPassword"
@@ -136,6 +126,16 @@ const EditProfile = (props) => {
             ></IonInput>
           </IonItem>
 
+          <IonItem lines="full">
+            <IonLabel position="floating">New Password</IonLabel>
+            <IonInput
+              name="newPassword"
+              type="password"
+              value={values.newPassword}
+              onIonChange={handleChange}
+            ></IonInput>
+          </IonItem>
+          
           <IonRow>
             <IonCol>
               <IonButton
@@ -157,105 +157,3 @@ const EditProfile = (props) => {
 };
 
 export default EditProfile;
-
-// import React from "react";
-// import {
-//     IonContent,
-//     IonPage,
-//     IonItem,
-//     IonLabel,
-//     IonInput,
-//     IonRow,
-//     IonCol,
-//     IonButton,
-// } from "@ionic/react";
-// import useForm from "../../hooks/useForm";
-// import firebase from "../../firebase";
-// import UserContext from "../../contexts/UserContext";
-// import NavHeader from "../Headers/NavHeader";
-// import validateCreateData from "../../validators/validateCreateData";
-
-// const INITIAL_STATE = {
-//     treesPlanted: "",
-//     treesSaved: "",
-//     treesCut: "",
-// };
-
-// const EditProfile = (props) => {
-//     const { user } = React.useContext(UserContext);
-//     const { handleSubmit, handleChange, values } = useForm(
-//         INITIAL_STATE,
-//         validateCreateData,
-//         handleCreateInfo
-//     );
-
-//     function handleCreateInfo() {
-//         if (!user) {
-//             props.history.push("/login");
-//         } else {
-//             const { treesPlanted, treesSaved, treesCut } = values;
-//             const newData = {
-//                 treesPlanted,
-//                 treesSaved,
-//                 treesCut,
-//             };
-//             firebase.db.collection("treesData").add(newData);
-//             props.history.push("/profile");
-//         }
-//     }
-
-//     return (
-//         <IonPage>
-//             <IonContent>
-//                 <NavHeader title="Edit Profile" />
-//                 <IonItem lines="full">
-//                     <IonLabel position="floating">Trees Planted</IonLabel>
-//                     <IonInput
-//                         name="treesPlanted"
-//                         value={values.treesPlanted}
-//                         type="text"
-//                         onIonChange={handleChange}
-//                         required
-//                     ></IonInput>
-//                 </IonItem>
-
-//                 <IonItem lines="full">
-//                     <IonLabel position="floating">Trees Saved</IonLabel>
-//                     <IonInput
-//                         name="treesSaved"
-//                         type="text"
-//                         value={values.treesSaved}
-//                         onIonChange={handleChange}
-//                         required
-//                     ></IonInput>
-//                 </IonItem>
-
-//                 <IonItem lines="full">
-//                     <IonLabel position="floating">Trees Cut</IonLabel>
-//                     <IonInput
-//                         name="treesCut"
-//                         type="text"
-//                         value={values.treesCut}
-//                         onIonChange={handleChange}
-//                         required
-//                     ></IonInput>
-//                 </IonItem>
-
-//                 <IonRow>
-//                     <IonCol>
-//                         <IonButton
-//                             type="submit"
-//                             color="primary"
-//                             expand="block"
-//                             onClick={handleSubmit}
-//                         >
-//                             Submit
-//             </IonButton>
-//                     </IonCol>
-//                 </IonRow>
-//             </IonContent>
-//         </IonPage>
-//     );
-// };
-
-// export default EditProfile;

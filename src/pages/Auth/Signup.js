@@ -37,9 +37,23 @@ const Signup = (props) => {
 
   async function authenticateUser() {
     setBusy(true);
-    const { name, email, password, treesPlanted, treesSaved, treesCut } = values;
+    const {
+      name,
+      email,
+      password,
+      treesPlanted,
+      treesSaved,
+      treesCut,
+    } = values;
     try {
-      await firebase.register(name, email, password, treesPlanted, treesSaved, treesCut);
+      await firebase.register(
+        name,
+        email,
+        password,
+        treesPlanted,
+        treesSaved,
+        treesCut
+      );
       toast("You have signed up successfully!");
       props.history.push("/");
     } catch (err) {
@@ -54,15 +68,15 @@ const Signup = (props) => {
       <IonLoading message={"Please wait..."} isOpen={busy} />
 
       <IonContent>
-        <IonText color="medium" className='tc ma4'>
+        <IonText color="medium" className="tc ma4">
           <h2> Welcome to MyNatur Space!</h2>
           <p className="pa3 tc">
             {" "}
             This Self-Assessment App helps in taking care of the environment.{" "}
             <br /> It affects each of us personally and helps us track the trees
             that have been cut or planted because of us.
-            <br />{" "}
-            It also provides us with News of the Environment and different Tree Plantation Events.
+            <br /> It also provides us with News of the Environment and
+            different Tree Plantation Events.
           </p>
         </IonText>
         <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
@@ -100,16 +114,16 @@ const Signup = (props) => {
             ></IonInput>
           </IonItem>
 
-          <IonItem lines="full">
-            <IonLabel position="floating">Trees Planted</IonLabel>
-            <IonInput
-              name="treesPlanted"
-              type="text"
-              value={values.treesPlanted}
-              onIonChange={handleChange}
-              required
-            ></IonInput>
-          </IonItem>
+          {/*<IonItem lines="full">
+        <IonLabel position="floating">Trees Planted</IonLabel>
+        <IonInput
+          name="treesPlanted"
+          type="text"
+          value={values.treesPlanted}
+          onIonChange={handleChange}
+          required
+        ></IonInput>
+      </IonItem>
 
           <IonItem lines="full">
             <IonLabel position="floating">Trees Saved</IonLabel>
@@ -131,7 +145,7 @@ const Signup = (props) => {
               onIonChange={handleChange}
               required
             ></IonInput>
-          </IonItem>
+  </IonItem>*/}
 
           <IonRow>
             <IonCol>
