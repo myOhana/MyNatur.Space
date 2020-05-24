@@ -20,6 +20,7 @@ import UserContext from "../../contexts/UserContext";
 import firebase from "../../firebase";
 import { toast } from "../../helpers/toast";
 
+
 const Profile = (props) => {
   const { user } = React.useContext(UserContext);
 
@@ -57,21 +58,20 @@ const Profile = (props) => {
                     <h5>Hi, {user.displayName}</h5>
                   </IonText>
                 </IonCol>
-                <IonCol size="6">
+                <IonCol size="12">
                   <IonItem lines="none">
                     <IonLabel className="trees-planted">
-                      <h2> Trees Planted: {user.treesPlanted}</h2>
+                      <h2> Trees Planted: 5</h2>
                     </IonLabel>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-saved">
-                      <h2> Trees Saved: {user.treesSaved}</h2>
-                      {console.log(user.treesPlanted)}
+                      <h2> Trees Saved: 10</h2>
                     </IonLabel>
                   </IonItem>
                   <IonItem lines="none">
                     <IonLabel className="trees-cut" color="profileheadline">
-                      <h2> Trees Cut: {user.treesCut}</h2>
+                      <h2> Trees Cut: 1</h2>
                     </IonLabel>
                   </IonItem>
                 </IonCol>
