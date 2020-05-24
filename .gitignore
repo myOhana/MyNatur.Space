@@ -8,6 +8,7 @@ node_modules/
 firebase/
 src/firebase/config.js
 **/firebase/config.js
+**/firebase/config
 
 # testing
 /coverage
