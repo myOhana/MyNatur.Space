@@ -52,14 +52,14 @@ const Signup = (props) => {
 
       <IonContent>
         <IonText color="medium" className='tc ma4'>
-          <h2 > Welcome to MyNatur Space!</h2>
-          <p>
+          <h2> Welcome to MyNatur Space!</h2>
+          <p className="pa3 tc">
             {" "}
             This Self-Assessment App helps in taking care of the environment.{" "}
             <br /> It affects each of us personally and helps us track the trees
             that have been cut or planted because of us.
             <br />{" "}
-            It also provides us with News of the Environment and different Tree Plantation Events. 
+            It also provides us with News of the Environment and different Tree Plantation Events.
           </p>
         </IonText>
         <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
