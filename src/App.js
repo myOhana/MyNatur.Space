@@ -22,6 +22,8 @@ import EditProfile from "./pages/Auth/EditProfile";
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
 import Forgot from "./pages/Auth/Forgot";
+import useAuth from "./hooks/useAuth";
+import UserContext from "./contexts/UserContext";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -43,40 +45,44 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 
 const App = () => {
+  const [user, setUser] = useAuth();
+
   return (
     <IonApp>
       <IonReactRouter>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route
-              path="/"
-              render={() => <Redirect to="/news" />}
-              exact={true}
-            />
-            <Route path="/news" component={News} />
-            <Route path="/events" component={Events} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/edit-profile" component={EditProfile} />
-            <Route path="/register" component={Signup} />
-            <Route path="/login" component={Login} />
-            <Route path="/forgot" component={Forgot} />
-            <Route component={() => <Redirect to="/news" />} />
-          </IonRouterOutlet>
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="news" href="/news">
-              <IonIcon icon={newspaperOutline} />
-              <IonLabel>News</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="events" href="/events">
-              <IonIcon icon={earthOutline} />
-              <IonLabel>Events</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="profile" href="/profile">
-              <IonIcon icon={personCircleOutline} />
-              <IonLabel>Profile</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
+        <UserContext.Provider value={{ user, setUser }}>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route
+                path="/"
+                render={() => <Redirect to="/news" />}
+                exact={true}
+              />
+              <Route path="/news" component={News} />
+              <Route path="/events" component={Events} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/edit-profile" component={EditProfile} />
+              <Route path="/register" component={Signup} />
+              <Route path="/login" component={Login} />
+              <Route path="/forgot" component={Forgot} />
+              <Route component={() => <Redirect to="/news" />} />
+            </IonRouterOutlet>
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="news" href="/news">
+                <IonIcon icon={newspaperOutline} />
+                <IonLabel>News</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="events" href="/events">
+                <IonIcon icon={earthOutline} />
+                <IonLabel>Events</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="profile" href="/profile">
+                <IonIcon icon={personCircleOutline} />
+                <IonLabel>Profile</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </UserContext.Provider>
       </IonReactRouter>
     </IonApp>
   );

@@ -22,6 +22,9 @@ const INITIAL_STATE = {
   name: "",
   email: "",
   password: "",
+  treesPlanted: "",
+  treesSaved:"",
+  treesCut:""
 };
 
 const Signup = (props) => {
@@ -34,9 +37,9 @@ const Signup = (props) => {
 
   async function authenticateUser() {
     setBusy(true);
-    const { name, email, password } = values;
+    const { name, email, password, treesPlanted, treesSaved, treesCut } = values;
     try {
-      await firebase.register(name, email, password);
+      await firebase.register(name, email, password, treesPlanted, treesSaved, treesCut);
       toast("You have signed up successfully!");
       props.history.push("/");
     } catch (err) {
@@ -92,6 +95,39 @@ const Signup = (props) => {
               name="password"
               type="password"
               value={values.password}
+              onIonChange={handleChange}
+              required
+            ></IonInput>
+          </IonItem>
+
+          <IonItem lines="full">
+            <IonLabel position="floating">Trees Planted</IonLabel>
+            <IonInput
+              name="treesPlanted"
+              type="text"
+              value={values.treesPlanted}
+              onIonChange={handleChange}
+              required
+            ></IonInput>
+          </IonItem>
+
+          <IonItem lines="full">
+            <IonLabel position="floating">Trees Saved</IonLabel>
+            <IonInput
+              name="treesSaved"
+              type="text"
+              value={values.treesSaved}
+              onIonChange={handleChange}
+              required
+            ></IonInput>
+          </IonItem>
+
+          <IonItem lines="full">
+            <IonLabel position="floating">Trees Cut</IonLabel>
+            <IonInput
+              name="treesCut"
+              type="text"
+              value={values.treesCut}
               onIonChange={handleChange}
               required
             ></IonInput>
