@@ -41,18 +41,12 @@ const Signup = (props) => {
       name,
       email,
       password,
-      treesPlanted,
-      treesSaved,
-      treesCut,
     } = values;
     try {
       await firebase.register(
         name,
         email,
         password,
-        treesPlanted,
-        treesSaved,
-        treesCut
       );
       toast("You have signed up successfully!");
       props.history.push("/");
